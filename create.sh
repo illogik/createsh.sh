@@ -76,7 +76,7 @@ fi
 # Function to check if an editor is set
 
 function editcheck()
-
+{
 if [[ -n "$EDITOR" ]]; then
 
     "$EDITOR" "$name"
@@ -86,6 +86,8 @@ else
 	vim "$name"
 	
 fi
+}
+
 
 ###############
 ##   Main    ##
