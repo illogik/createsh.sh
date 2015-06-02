@@ -75,11 +75,12 @@ fi
 
 # Function to check if an editor is set
 
-function editcheck()
+function edit()
 {
-if [[ -n "$EDITOR" ]]; then
-
-    "$EDITOR" "$name"
+if [[ -f "$name".sh ]]; then
+        
+    
+    vim "$name".sh
 	
 else 
 
@@ -158,7 +159,7 @@ read -p "Would you like the begin editing the file now? (y/n) > " response2
 
 if [[ "$response2" == "y" ]]; then
 
-	editcheck
+	edit
 	
 else
 
